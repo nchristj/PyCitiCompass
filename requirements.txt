@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+pyyaml
+requests
+apscheduler
+pandas
+networkx
+py2neo
+python-multipart

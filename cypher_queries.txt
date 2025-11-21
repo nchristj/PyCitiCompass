@@ -1,0 +1,18 @@
+MATCH (s:ImpactSnapshot)
+RETURN s
+ORDER BY s.snapshot DESC;
+
+MATCH (n:Node {snapshot:"<snapshot>"})
+OPTIONAL MATCH (n)-[r {snapshot:"<snapshot>"}]->(m:Node {snapshot:"<snapshot>"})
+RETURN n, r, m;
+
+MATCH p = (m:Node {id:"method:PaymentService.processPayment", snapshot:"<snapshot>"})
+          -[:CALLS*1..6 {snapshot:"<snapshot>"}]->(x)
+RETURN p;
+
+MATCH (d:Node {type:"DTO", snapshot:"<snapshot>"})-[:HAS_FIELD {snapshot:"<snapshot>"}]->(f)
+RETURN d, f;
+
+MATCH (s1:ImpactSnapshot {snapshot:"<from>"})
+MATCH (s2:ImpactSnapshot {snapshot:"<to>"})
+RETURN s1, s2;

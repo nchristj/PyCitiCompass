@@ -1,0 +1,17 @@
+Neo4j Bloom Hints for PyCodeCompassService
+-----------------------------------------
+
+Node Categories:
+- Node          (use property `type` to color Controllers, Methods, DTOs, Fields)
+- ImpactSnapshot
+
+Relationship Types:
+- CALLS
+- EXPOSES
+- HAS_FIELD
+
+Useful search phrases:
+- Node WHERE type = 'Controller'
+- Node WHERE type = 'Method'
+- Node WHERE className CONTAINS 'Payment'
+- SHOW PATH FROM Node WHERE id = 'method:PaymentService.processPayment'

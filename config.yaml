@@ -1,0 +1,58 @@
+work_dir: "C:/CodeIntelligence/work"
+codeql_bin: "codeql"
+query_dir: "C:/CodeIntelligence/DB"
+
+services:
+  - name: "payment"
+    project_root: "C:/Users/chris/IdeaProjects/payment-service"
+    db_name: "payment-service_db"
+    controller_bqrs: "result_controller.bqrs"
+    methods_bqrs: "result_methods.bqrs"
+    calls_bqrs: "result_calls.bqrs"
+    controller_json: "result_controller.json"
+    methods_json: "result_methods.json"
+    calls_json: "result_calls.json"
+
+  - name: "account"
+    project_root: "C:/Users/chris/IdeaProjects/account-service"
+    db_name: "account-service_db"
+    controller_bqrs: "result_account_controller.bqrs"
+    methods_bqrs: "result_account_methods.bqrs"
+    calls_bqrs: "result_account_calls.bqrs"
+    controller_json: "result_account_controller.json"
+    methods_json: "result_account_methods.json"
+    calls_json: "result_account_calls.json"
+
+  - name: "notification"
+    project_root: "C:/Users/chris/IdeaProjects/notification-service"
+    db_name: "notification-service_db"
+    controller_bqrs: "result_notification_controller.bqrs"
+    methods_bqrs: "result_notification_methods.bqrs"
+    calls_bqrs: "result_notification_calls.bqrs"
+    controller_json: "result_notification_controller.json"
+    methods_json: "result_notification_methods.json"
+    calls_json: "result_notification_calls.json"
+
+src_folders:
+  - "C:/Users/chris/IdeaProjects/payment-service/src/main/java"
+  - "C:/Users/chris/IdeaProjects/account-service/src/main/java"
+  - "C:/Users/chris/IdeaProjects/notification-service/src/main/java"
+
+functional_requirement: "Add email notification when payment fails"
+impact_start: "processPayment"
+
+neo4j:
+  enabled: true
+  uri: "bolt://neo4j:7687"
+  user: "neo4j"
+  password: "password"
+
+scheduler:
+  hour: 0
+  minute: 0
+
+ollama:
+  enabled: true
+  local_mode: true
+  url: "http://localhost:11434/api/generate"
+  model: "glm-4.6:cloud"

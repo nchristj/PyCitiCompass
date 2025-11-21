@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "PyCodeCompassService API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8000/health"
+      }
+    },
+    {
+      "name": "Run Pipeline Now",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:8000/run-now"
+      }
+    },
+    {
+      "name": "Last Run Status",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8000/last-run"
+      }
+    },
+    {
+      "name": "Snapshot Payload",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8000/snapshot/{{snapshot_id}}/payload"
+      }
+    },
+    {
+      "name": "Snapshot Graph",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8000/snapshot/{{snapshot_id}}/graph"
+      }
+    },
+    {
+      "name": "Snapshot Diff",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8000/snapshot/diff?from={{from_snapshot}}&to={{to_snapshot}}"
+      }
+    },
+    {
+      "name": "Impact for Node",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8000/snapshot/{{snapshot_id}}/impact/{{node_id}}?max_hops={{hops}}"
+      }
+    },
+    {
+      "name": "AI - Ollama GLM 4.6",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:8000/ai/ollama",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"Explain payment flow\"\n}"
+        }
+      }
+    }
+  ]
+}
