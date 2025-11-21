@@ -42,9 +42,9 @@ PyCodeCompassService/
 ---
 🧩 High-Level Architecture
 ```pgsql
-           +---------------------------+
-           |     Functional Requirement |
-           +-------------+-------------+
+           +--------------------------------------+
+           |  (REACT UI)   Functional Requirement |
+           +-------------+------------------------+
                          |
                          v
               +----------+----------+
