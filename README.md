@@ -8,7 +8,7 @@ PyCitiCompass Service is an automated **CodeQL + Impact Analysis Microservice** 
 - Includes an **AI reasoning engine** using **Ollama + GLM-4.6**
 - Provides endpoints for snapshots, graph analysis, diffs, and AI reasoning
 - Runs nightly via **APScheduler at 00:00 AM**
-
+Demo: https://drive.google.com/file/d/1WRqV0LVgbGJZOpASpK9KudCNrzZFyqlb/view?usp=drive_link 
 ---
 
 ## 🚀 Features
