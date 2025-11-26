@@ -73,7 +73,7 @@ PyCodeCompassService/
                                            |                   |                    |  Impact Report     |
                                            v                   |                    +----------+---------+
                                     +------+-------+           |                               |
-                                    | Impact Graph |           |                               |
+                                    | Repo   Graph |           |                               |
                                     |  (NetworkX)  |--------+-----                             |
                                     +---+----------+             |                             |
                                                                  |                             |                               
